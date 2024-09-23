@@ -7,11 +7,21 @@
     <!-- Daisy UI CDN-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+ 
+        #blurr{
+
+                backdrop-filter: blur(10px); 
+                opacity:1;
+             
+    }
+        
+    </style>
 </head>
 <body>
-    <header>
+    <header  class="fixed top-0  z-50 w-full h-20 bg-slate-950 ">
         <!-- Nav section start-->
-         <nav class="w-full flex justify-center bg-green-100 py-3"> 
+         <nav id="blurr" class="w-full  flex justify-center bg-green-100 py-3 custom-shadow"> 
         <div class="navbar bg-green-100 w-full lg:w-9/12 ">
             <div class="navbar-start">
               <div class="dropdown">
@@ -47,20 +57,24 @@
 
         <!-- Nav section End-->
     </nav>
+
+     <!-- toggle button section -->
+     <section class="p-10 mb-10 custom-shadow bg-slate-100">
+        <div class="flex justify-center items-center gap-4 ">
+            <button class="btn btn-xs btn-lg">Donation</button>
+            <button class="btn btn-xs btn-lg">History</button>
+        </div>
+     </section>
+
     </header>
        
-    <main class="w-full mt-10">
+    <main class="w-full  my-10 py-9 ">
         <!-- toggle button section -->
-         <section class="">
-            <div class="flex justify-center items-center gap-4">
-                <button class="btn btn-xs btn-lg">Donation</button>
-                <button class="btn btn-xs btn-lg">History</button>
-            </div>
-         </section>
+
 
          <!-- card section-->
          
-          <section class="mt-3 mb-5">
+          <section class="mt-32 mb-5 p-10">
 
             <!-- card -1-->    
             <div class="card lg:card-side bg-base-100 shadow-xl w-9/12 mt-10 m-auto">
