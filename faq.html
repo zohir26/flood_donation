@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+     <!-- Daisy UI CDN-->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://kit.fontawesome.com/6f5c3288a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- navbar-->
+  <header  class=" w-full  ">
+    <!-- Nav section start-->
+     <nav  class="w-full  flex justify-center bg-green-100 py-3 "> 
+    <div class="navbar bg-green-100 w-full lg:w-9/12 ">
+        <div class="navbar-start">
+          <div class="dropdown">
+
+            <!-- blog button nav-->
+            <ul
+              tabindex="0"
+              class="menu menu-sm bg-green-300 rounded-2xl p-2">
+              <li><a href="index.html"  class="font-bold">Home</a></li>                 
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class=" text-xl flex justify-center items-center gap-2 font-bold ">
+            <!-- logo icon-->
+         <img class="py-0" src="B10A5-DOM-Quest-Build-and-Manipulate/assets/logo.png" alt="">
+            Donate Bangladesh</a>
+        </div>
+        <div class="navbar-end">
+        <!--coin icon nav bar-->
+            <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+       
+            <!-- wallet balance-->
+             <ul>
+                <li> <p class="font-bold"> 10000 <span> BDT</span></p> </li>
+             </ul>
+              <!-- wallet balance end-->
+
+            </div>
+          </button>
+        </div>
+      </div>
+
+    <!-- Nav section End-->
+</nav>
+
+</header>
+
+
+<main class="w-full mt-10">
+    <!--FAQ section-->
+    <div class=" px-14">
+        <!-- heading with animating icon-->
+        <h1 class="text-3xl font-extrabold"> Important FAQ 
+            <i class="fa-solid fa-question fa-shake"></i>
+        </h1>
+
+        <!-- Accordion Section-->
+         <section class="p-10 w-full lg:9/12"> 
+        <div class="collapse bg-base-200 w-full">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title text-xl font-medium w-full lg:w-full">What is the Document Object Model (DOM) </div>
+            <div class="collapse-content">
+              <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, or text. The DOM provides a structured way to access and manipulate the content, structure, and styling of a document through scripting languages like JavaScript.</p>
+            </div>
+        </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p>In JavaScript, we can select elements from the DOM using various methods provided by the document object. These methods allow us to target elements based on different attributes like ID, class, tag name, or CSS selectors. <br>
+               <b>   Common Methods to Select DOM Elements: </b>  1. getElementById() 2. getElementsByClassName() 3. getElementsByTagName() 3.querySelector() 4. querySelectorAll() 5. getElementsByName() etc
+            </p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">What is an event delegation in the context of DOM and why it is useful?</div>
+            <div class="collapse-content">
+              <p>Event delegation is a technique in JavaScript where we can add a single event listener to a parent element instead of adding multiple event listeners to individual child elements. The event listener on the parent can handle events triggered by its children due to event bubbling—a process where events triggered on a child element propagate up to its ancestors in the DOM. <br>
+                <strong> Its usefulness:</strong> 
+                <strong>Efficiency</strong>: Only one event listener is added to the ul, reducing memory consumption and improving performance.
+                <strong>Handling Dynamic Elements</strong>: If we later add more li elements dynamically, the event listener on ul will automatically handle clicks on the new items.
+               <strong> Simpler Maintenance</strong>: Our code is easier to maintain because you're managing fewer event listeners and only dealing with the parent element.
+              </p>
+            </div>
+          </div>
+
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using DOM</div>
+            <div class="collapse-content">
+              <p>
+                <strong>1. Manipulating Element Attributes: </strong>
+                a. Getting an Attribute : element.getAttribute('');
+                b. Setting an Attribute : element.setAttribute('class', 'className');
+                c. Removing an Attribute: element.removeAttribute('');
+                d. If a class exist: let hasClass = element.hasAttribute('');
+
+               <strong> 2.  Manipulating Element styles : </strong>
+                a. Set a color: element.style.color = 'blue';
+                b. Get a style : let bgColor = element.style.backgroundColor;
+                   console.log(bgColor);
+                c. Remove a style: element.style.color = ''; 
+                d. Add a class: element.classList.add('active');
+              </p>
+            </div>
+          </div>
+
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">When to use .value and when to use .innerText in DOM</div>
+            <div class="collapse-content">
+              <p>When input and textarea text has to get we need to use <strong> .value  </strong>but when we have to get text from tags like P, h1-h6 etc we need to use <strong>.innerText</strong>. </p>
+            </div>
+          </div>
+
+    </div>
+</section>
+</main>
+</body>
+</html>
