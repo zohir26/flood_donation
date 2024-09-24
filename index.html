@@ -44,9 +44,9 @@
             <!--coin icon nav bar-->
                 <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
            
-                <!-- wallet balance-->
+                <!-- wallet balance--> 
                  <ul>
-                    <li> <p class="font-bold"> 10000 <span> BDT</span></p> </li>
+                    <p id="account-balance" class="font-bold"> 10000 </p> 
                  </ul>
                   <!-- wallet balance end-->
 
@@ -87,7 +87,7 @@
                     <!-- card balance-->
                     <div class="flex gap-2">
                         <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
-                        <p class="font-bold">0 <span> BDT</span></p>
+                        <p id="card-wallet" class="font-bold">100</p> <span> BDT</span>
                     </div>
                     <!--card title-->
                     <h2 class="card-title">Donate for Flood at Noakhali, Bangladesh</h2>
@@ -99,13 +99,12 @@
                     <!-- card Donate div-->
                     <div class="card-actions justify-center w-full gap-3 mt-4 flex flex-col">
                         <!-- card donate input-->
-                        <input type="text" placeholder="Write Donation Amount" class="input w-full  border-black" />
+                        <input type="text" id="card-donation-input" placeholder="Write Donation Amount" class="input w-full  border-black" />
                         <!-- card donate button-->
-                        <button class="btn btn-primary w-full">Donate</button>
+                        <button id="card-donate-btn" class="btn btn-primary w-full">Donate</button>
                     </div>
                 </div>
-              </div>
-
+            </div>
 
 
                           <!-- card -2-->    
@@ -119,7 +118,7 @@
                     <!-- card balance-->
                     <div class="flex gap-2">
                         <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
-                        <p class="font-bold">10000<span> BDT</span></p>
+                        <p id="card-wallet-2" class="font-bold">10000<span> BDT</span></p>
                     </div>
                     <!--card title-->
                     <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -128,9 +127,9 @@
                     <!-- card Donate div-->
                     <div class="card-actions justify-center w-full gap-3 mt-4 flex flex-col">
                         <!-- card donate input-->
-                        <input type="text" placeholder="Write Donation Amount" class="input w-full  border-black" />
+                        <input id="card-donation-input-2" type="text" placeholder="Write Donation Amount" class="input w-full  border-black" />
                         <!-- card donate button-->
-                        <button class="btn btn-primary w-full">Donate</button>
+                        <button id="card-donate-btn-2" class="btn btn-primary w-full">Donate</button>
                     </div>
                 </div>
               </div>
@@ -148,7 +147,7 @@
                     <!-- card balance-->
                     <div class="flex gap-2">
                         <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
-                        <p class="font-bold">20000 <span> BDT</span></p>
+                        <p id="card-wallet-3" class="font-bold">20000 <span> BDT</span></p>
                     </div>
                     <!--card title-->
                     <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
@@ -157,9 +156,9 @@
                     <!-- card Donate div-->
                     <div class="card-actions justify-center w-full gap-3 mt-4 flex flex-col">
                         <!-- card donate input-->
-                        <input type="text" placeholder="Write Donation Amount" class="input w-full  border-black" />
+                        <input id="card-donation-input-3" type="text" placeholder="Write Donation Amount" class="input w-full  border-black" />
                         <!-- card donate button-->
-                        <button class="btn btn-primary w-full">Donate</button>
+                        <button id="card-donate-btn-3" class="btn btn-primary w-full">Donate</button>
                     </div>
                 </div>
               </div>
@@ -169,5 +168,9 @@
 
 
 <script src="js/button.js"></script>
+<script src="js/donation.js"></script>
+ <script src="js/common.js"></script>
+ <script src="js/donation2.js"></script>
+ <script src="js/donation3.js"></script>
 </body>
 </html>
