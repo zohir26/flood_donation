@@ -1,17 +1,6 @@
 //global variable an empty array where i can push my history for loop through
 let transactionHistory = [];
 
-// modal
-// function openModal () {
-//   const modal = document.getElementById("donation-modal");
-//   modal.classList.remove ("hidden");
-// }
-
-// function closeModal () {
-//   const modal = document.getElementById (" donation-modal"); 
-//   modal.classList.add("hidden")
-// }
-// document.getElementById ("close-modal-Btn").addEventListener ('click', closeModal) ;
 
 // common Function
 function commonFunction(cardDonationInputId, cardWalletId, accountBalanceId, donationPurpose) {
@@ -44,63 +33,67 @@ function commonFunction(cardDonationInputId, cardWalletId, accountBalanceId, don
     alert('You do not have sufficient balance');
     return;
   }
-  else{
-    alert(`Thanks for Donating for ${donationPurpose}`);
-  }
+  // else {
+  //   alert(`Thanks for Donating for ${donationPurpose}`);
+  // }
 
   // Update account balance
   document.getElementById(accountBalanceId).innerText = newAccountBalance;
 
-// openModal();
-  
+
+
 
   // Add donation info to history section
   const currentDate = new Date();
-  const date= currentDate.toLocaleDateString();
+  const date = currentDate.toLocaleDateString();
   const time = currentDate.toLocaleTimeString();
   const transaction = `${cardDonationInput} Tk is donated for ${donationPurpose} on ${date} at ${time}`;
   transactionHistory.push(transaction);
 
-  // const p = document.createElement('p');
-  // const currentDate = new Date ();
+  // when the transaction will done the modal function will call
+  document.getElementById('my_modal_5').showModal();
 
-  // document.getElementById("history-section").appendChild(p);
 
   return cardNewBalance, newAccountBalance;
 }
 
 
 
-// Add event listeners to the donate buttons for each card
-document.getElementById("card-donate-btn").addEventListener('click', function(event) {
+// using common function and Add event listeners to the donate buttons for each card
+
+document.getElementById("card-donate-btn").addEventListener('click', function (event) {
   event.preventDefault();
- commonFunction('card-donation-input', 'card-wallet', 'account-balance', 'Flood at Noakhali, Bangladesh');
+  commonFunction('card-donation-input', 'card-wallet', 'account-balance', 'Flood at Noakhali, Bangladesh');
 });
 
-document.getElementById("card-donate-btn-2").addEventListener('click', function(event) {
+document.getElementById("card-donate-btn-2").addEventListener('click', function (event) {
   event.preventDefault();
   commonFunction('card-donation-input-2', 'card-wallet-2', 'account-balance', 'Donate for Flood Relief in Feni,Bangladesh');
 });
 
-document.getElementById("card-donate-btn-3").addEventListener('click', function(event) {
+document.getElementById("card-donate-btn-3").addEventListener('click', function (event) {
   event.preventDefault();
-  commonFunction ('card-donation-input-3', 'card-wallet-3', 'account-balance', 'Aid for Injured in the Quota Movement');
+  commonFunction('card-donation-input-3', 'card-wallet-3', 'account-balance', 'Aid for Injured in the Quota Movement');
 });
 
+// history button functionality
 
+document.getElementById("history-btn").addEventListener('click', function () {
 
-document.getElementById("history-btn").addEventListener('click', function(){
-  
-  const historySection= document.getElementById("history-section");
+  const historySection = document.getElementById("history-section");
   historySection.removeAttribute("hidden")
   historySection.innerHTML = "";
-  // historySection.innerHTML = '';
-  // run the for of loop
-  transactionHistory.forEach(function (transaction) {
+  // historySection.innerHTML = '' if i am not give this the previous value will be automatically added;
+  
+  // run the for of loop so that the history is added to array one by one
+
+  for (const transaction of transactionHistory) {
     const p = document.createElement('p');
     p.innerText = transaction;
     historySection.appendChild(p);
-  });
+  }
+  
+
 
 }
 )

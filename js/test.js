@@ -59,22 +59,5 @@
 //     return;
 //   });
   
-<button class="btn btn-modal" onclick="my_modal_5.showModal()">Donation</button>
-<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
-    <div class="modal-box">
-        <h1 class="text-lg font-bold">Congratulation!!!!</h1>
-        <!-- img coin-->
-        <div class="flex justify-center mt-2">
-            <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
-        </div>
 
-        <p class="py-4">You have donated for humankind</p>
-        <h2 class="text-lg font-bold"> Successfully</h2>
-        <div class="modal-action flex justify-center">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close confirmation</button>
-            </form>
-        </div>
-    </div>
-</dialog>
+

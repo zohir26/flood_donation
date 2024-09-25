@@ -28,7 +28,7 @@
 
                         <!-- blog button nav-->
                         <ul tabindex="0" class="menu menu-sm bg-green-300 rounded-2xl p-2">
-                            <li><a href="faq.html" target="_blank" class="font-bold">Blog</a></li>
+                            <li><a href="faq.html" target="_blank" class="font-bold border-0 p-2">Blog</a></li>
                         </ul>
                     </div>
                 </div>
@@ -103,19 +103,11 @@
                         <input type="text" id="card-donation-input" placeholder="Write Donation Amount"
                             class="input w-full  border-black" />
                         <!-- card donate button-->
-                        <button id="card-donate-btn" class="btn btn-primary w-full">Donate</button> <!-- modal 0 -->
-                        <div id="donation-modal" class="bg-slate-300 rounded-lg shadow-lg p-10 text-center gap-3 w-1/4 flex justify-center hidden">
-                           <div class="modal-content">
-                             <h2 class="font-bold mb-2 text-lg">Congrats!</h2>
-                             <div class="flex justify-center items-center">
-                               <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="Coin">
-                             </div>
-                             <p>You Have Donated for Humankind</p>
-                             <p class="text-lg mt-2"><strong>Successfully</strong></p>
-                             <button id="close-modal-Btn" class="btn rounded bg-slate-400 mt-4 p-3 text-white">Close Confirmation</button>
-                           </div>
-                         </div>
+                        <button id="card-donate-btn" class="btn btn-primary w-full">Donate</button> <!-- 
                         
+                        modal 0 -->
+
+
                     </div>
                 </div>
 
@@ -199,43 +191,29 @@
 
 
         <!-- modal-->
-         <!-- modal 0 -->
-         <div id="donation-modal" class="bg-slate-300 rounded-lg shadow-lg p-10 text-center gap-3 w-1/4 flex justify-center hidden">
-            <div class="modal-content">
-              <h2 class="font-bold mb-2 text-lg">Congrats!</h2>
-              <div class="flex justify-center items-center">
-                <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="Coin">
-              </div>
-              <p>You Have Donated for Humankind</p>
-              <p class="text-lg mt-2"><strong>Successfully</strong></p>
-              <button id="close-modal-Btn" class="btn rounded bg-slate-400 mt-4 p-3 text-white">Close Confirmation</button>
-            </div>
-          </div>
-          
 
+        <button id="openModal" class="hidden"
+            onclick="document.getElementById('my_modal_5').showModal()">Donation</button>
 
-        <!-- Modal Structure 1 -->
-        <!-- Open the modal using ID.showModal() method -->
-
-        <button class="btn btn-modal" onclick="my_modal_5.showModal()">Donation</button>
+        <!-- DaisyUI Modal -->
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
             <div class="modal-box">
-                <h1 class="text-lg font-bold">Congratulation!!!!</h1>
-                <!-- img coin-->
+                <h1 class="text-lg font-bold">Congrats!!!!</h1>
+                <!-- Coin Image -->
                 <div class="flex justify-center mt-2">
-                    <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                    <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="Coin Image">
                 </div>
-        
                 <p class="py-4">You have donated for humankind</p>
-                <h2 class="text-lg font-bold"> Successfully</h2>
+                <h2 class="text-lg font-bold">Successfully</h2>
                 <div class="modal-action flex justify-center">
                     <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
+                        <!-- Close Button for Modal -->
                         <button class="btn">Close confirmation</button>
                     </form>
                 </div>
             </div>
         </dialog>
+
 
 
     </main>
