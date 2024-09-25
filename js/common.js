@@ -1,6 +1,17 @@
-//global variable
+//global variable an empty array where i can push my history for loop through
 let transactionHistory = [];
 
+// modal
+// function openModal () {
+//   const modal = document.getElementById("donation-modal");
+//   modal.classList.remove ("hidden");
+// }
+
+// function closeModal () {
+//   const modal = document.getElementById (" donation-modal"); 
+//   modal.classList.add("hidden")
+// }
+// document.getElementById ("close-modal-Btn").addEventListener ('click', closeModal) ;
 
 // common Function
 function commonFunction(cardDonationInputId, cardWalletId, accountBalanceId, donationPurpose) {
@@ -40,7 +51,7 @@ function commonFunction(cardDonationInputId, cardWalletId, accountBalanceId, don
   // Update account balance
   document.getElementById(accountBalanceId).innerText = newAccountBalance;
 
-
+// openModal();
   
 
   // Add donation info to history section
@@ -68,7 +79,7 @@ document.getElementById("card-donate-btn").addEventListener('click', function(ev
 
 document.getElementById("card-donate-btn-2").addEventListener('click', function(event) {
   event.preventDefault();
-  commonFunction('card-donation-input-2', 'card-wallet-2', 'account-balance', 'Earthquake Relief in Sylhet, Bangladesh');
+  commonFunction('card-donation-input-2', 'card-wallet-2', 'account-balance', 'Donate for Flood Relief in Feni,Bangladesh');
 });
 
 document.getElementById("card-donate-btn-3").addEventListener('click', function(event) {

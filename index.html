@@ -103,7 +103,19 @@
                         <input type="text" id="card-donation-input" placeholder="Write Donation Amount"
                             class="input w-full  border-black" />
                         <!-- card donate button-->
-                        <button id="card-donate-btn" class="btn btn-primary w-full">Donate</button>
+                        <button id="card-donate-btn" class="btn btn-primary w-full">Donate</button> <!-- modal 0 -->
+                        <div id="donation-modal" class="bg-slate-300 rounded-lg shadow-lg p-10 text-center gap-3 w-1/4 flex justify-center hidden">
+                           <div class="modal-content">
+                             <h2 class="font-bold mb-2 text-lg">Congrats!</h2>
+                             <div class="flex justify-center items-center">
+                               <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="Coin">
+                             </div>
+                             <p>You Have Donated for Humankind</p>
+                             <p class="text-lg mt-2"><strong>Successfully</strong></p>
+                             <button id="close-modal-Btn" class="btn rounded bg-slate-400 mt-4 p-3 text-white">Close Confirmation</button>
+                           </div>
+                         </div>
+                        
                     </div>
                 </div>
 
@@ -182,24 +194,49 @@
 
         <!-- history section-->
         <div id="history-section" class="hidden bg-slate-300 text-red-600 w-96  mt-80 m-auto">
-          
+
         </div>
 
 
         <!-- modal-->
-
-        <!-- Modal Structure -->
-        <div id="donationModal" class="bg-slate-300  text-center gap-3 w-1/4 flex justify-center hidden" >
+         <!-- modal 0 -->
+         <div id="donation-modal" class="bg-slate-300 rounded-lg shadow-lg p-10 text-center gap-3 w-1/4 flex justify-center hidden">
             <div class="modal-content">
-                <h2 class="font-bold mb-2">Congrats!</h2>
-                <div class="flex justify-center items-center" >
-                    <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
-                </div>              
-                <p>You Have Donated for Humankind</p>
-                <p><strong>Successfully</strong></p>
-                <button class="btn-primary rounded bg-red-400 mt-4"  id="closeModalBtn">Close Confirmation</button>
+              <h2 class="font-bold mb-2 text-lg">Congrats!</h2>
+              <div class="flex justify-center items-center">
+                <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="Coin">
+              </div>
+              <p>You Have Donated for Humankind</p>
+              <p class="text-lg mt-2"><strong>Successfully</strong></p>
+              <button id="close-modal-Btn" class="btn rounded bg-slate-400 mt-4 p-3 text-white">Close Confirmation</button>
             </div>
-        </div>
+          </div>
+          
+
+
+        <!-- Modal Structure 1 -->
+        <!-- Open the modal using ID.showModal() method -->
+
+        <button class="btn btn-modal" onclick="my_modal_5.showModal()">Donation</button>
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center">
+            <div class="modal-box">
+                <h1 class="text-lg font-bold">Congratulation!!!!</h1>
+                <!-- img coin-->
+                <div class="flex justify-center mt-2">
+                    <img src="B10A5-DOM-Quest-Build-and-Manipulate/assets/coin.png" alt="">
+                </div>
+        
+                <p class="py-4">You have donated for humankind</p>
+                <h2 class="text-lg font-bold"> Successfully</h2>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
 
     </main>
 
